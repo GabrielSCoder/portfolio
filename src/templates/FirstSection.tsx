@@ -20,7 +20,7 @@ export default function FirstSection() {
                             className="text-base sm:text-lg rounded-3xl bg-transparent border p-2 px-4 border-sky-800 text-white hover:bg-sky-800 transition-colors"
                             onClick={() => window.location.href = "#contato"}
                         >
-                            Me contate
+                            Contate-me
                         </button>
                     </div>
                 </div>
