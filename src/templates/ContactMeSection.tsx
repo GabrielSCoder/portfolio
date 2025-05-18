@@ -2,6 +2,7 @@ import instagram from "../assets/Instagram_icon.png";
 import gitHub from "../assets/Octicons-mark-github.svg";
 import linkedin from "../assets/LinkedIn_logo_initials.png";
 import gmail from "../assets/Gmail_icon_(2020).svg.png"
+import wpp from "../assets/WhatsApp.webp"
 
 export default function ContactMeSection() {
     return (
@@ -48,6 +49,14 @@ export default function ContactMeSection() {
                     className="hover:scale-110 transition-transform"
                 >
                     <img src={gmail} alt="Email" className="w-10 h-10" />
+                </a>
+                 <a
+                    href="http://wa.me/5588993594491"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:scale-110 transition-transform"
+                >
+                    <img src={wpp} alt="whatsapp" className="w-10 h-10" />
                 </a>
             </div>
         </section>
