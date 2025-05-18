@@ -48,9 +48,9 @@ export default function TecnoSection() {
                 Tecnologias
             </h3>
 
-            {/* Mobile: scroll horizontal com 2 "páginas" verticais */}
-            <div className="block sm:hidden overflow-x-auto overflow-y-hidden flex snap-x snap-mandatory scroll-smooth">
-                {/* Página 1 */}
+
+            <div className=" sm:hidden overflow-x-auto overflow-y-hidden flex snap-x snap-mandatory scroll-smooth">
+               
                 <div className="min-w-full flex flex-col gap-4 p-2 snap-start">
                     {techs.slice(0, 4).map((tech, index) => (
                         <div
@@ -63,7 +63,7 @@ export default function TecnoSection() {
                     ))}
                 </div>
 
-                {/* Página 2 */}
+               
                 <div className="min-w-full flex flex-col gap-4 p-2 snap-start">
                     {techs.slice(4).map((tech, index) => (
                         <div

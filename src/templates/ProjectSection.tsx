@@ -39,9 +39,9 @@ export default function ProjectsSection() {
                     Alguns de meus trabalhos
                 </h3>
 
-                {/* Mobile (scroll horizontal dividido em 2 "páginas") */}
-                <div className="block sm:hidden overflow-x-auto overflow-y-hidden flex snap-x snap-mandatory scroll-smooth mt-4">
-                    {/* Página 1 */}
+                
+                <div className=" sm:hidden overflow-x-auto overflow-y-hidden flex snap-x snap-mandatory scroll-smooth mt-4">
+                  
                     <div className="min-w-full flex flex-col gap-4 snap-start">
                         {projects.slice(0, 2).map((project, index) => (
                             <a
@@ -67,7 +67,7 @@ export default function ProjectsSection() {
                         ))}
                     </div>
 
-                    {/* Página 2 */}
+                 
                     <div className="min-w-full flex flex-col gap-4 snap-start">
                         {projects.slice(2).map((project, index) => (
                             <a
@@ -94,7 +94,7 @@ export default function ProjectsSection() {
                     </div>
                 </div>
 
-                {/* Desktop (grid padrão) */}
+              
                 <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
                     {projects.map((project, index) => (
                         <a
