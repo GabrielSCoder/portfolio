@@ -1,16 +1,31 @@
 @import "tailwindcss";
 
-html,
-body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
-  scroll-behavior: smooth;
-  overflow-x: hidden;
+@theme {
+  --color-base-black: #1a1a1a
 }
 
-@theme {
-  --color-base-black : #1a1a1a
+.container-custom {
+  @apply h-screen w-screen overflow-y-auto snap-y snap-mandatory scroll-smooth relative;
+
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+.no-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.container-custom::-webkit-scrollbar {
+  display: none;
+}
+
+.sec {
+  @apply h-screen flex items-center justify-center snap-center;
+}
+
+.roww {
+  width: 100vw;
 }

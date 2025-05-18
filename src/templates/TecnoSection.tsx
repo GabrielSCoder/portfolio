@@ -1,38 +1,94 @@
 export default function TecnoSection() {
+    const techs = [
+        {
+            title: "React",
+            desc: "Criação de interfaces modernas para sistemas CRM, dashboards, aplicações web responsivas e aplicativos móveis com foco em usabilidade.",
+        },
+        {
+            title: "Node.js",
+            desc: "Desenvolvimento de APIs RESTful, back-ends escaláveis e integrações com bancos de dados para soluções web completas.",
+        },
+        {
+            title: "PHP",
+            desc: "Construção e manutenção de sites, blogs, sistemas de gerenciamento de conteúdo e aplicações legadas com eficiência e segurança.",
+        },
+        {
+            title: ".Net",
+            desc: "Desenvolvimento de sistemas empresariais, aplicações internas e APIs robustas com C# e .NET Core, focando em performance e estrutura sólida.",
+        },
+        {
+            title: "Python - Web",
+            desc: "Desenvolvimento de APIs e aplicações web com Flask e Django.",
+        },
+        {
+            title: "Python - Análise de Dados",
+            desc: "Exploração de dados, automações e visualizações com bibliotecas como Pandas e Matplotlib para extração de insights e apoio à tomada de decisões.",
+        },
+    ];
 
     return (
-       <div className="w-full max-w-6xl mx-auto text-white justify-center items-center p-2 flex flex-col gap-4 min-h-screen snap-start" id="tecnologias">
+        <section
+            id="tecnologias"
+            className="
+                sec 
+                w-full 
+                max-w-6xl 
+                sm:max-w-4xl  /* limite maior para telas médias */
+                mx-auto 
+                text-white 
+                p-2 
+                sm:px-6       /* padding horizontal maior em telas médias+ */
+                flex flex-col 
+                gap-4 
+                mb-20
+            "
+        >
             <h2 className="text-[30px] font-semibold text-white">O que eu faço</h2>
             <h3 className="text-[16px] font-semibold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent text-center">
                 Tecnologias
             </h3>
-            <div className="grid grid-cols-3 grid-rows-2 gap-2">
-                <div className="bg-[#2c2c2c] border border-gray-700 rounded-xl p-6 shadow-md hover:shadow-xl transition flex flex-col gap-2">
-                    <h4 className="text-xl font-semibold">React</h4>
-                    <p className="text-gray-300 text-sm">Criação de interfaces modernas para sistemas CRM, dashboards, aplicações web responsivas e aplicativos móveis com foco em usabilidade.</p>
+
+            {/* Mobile: scroll horizontal com 2 "páginas" verticais */}
+            <div className="block sm:hidden overflow-x-auto overflow-y-hidden flex snap-x snap-mandatory scroll-smooth">
+                {/* Página 1 */}
+                <div className="min-w-full flex flex-col gap-4 p-2 snap-start">
+                    {techs.slice(0, 4).map((tech, index) => (
+                        <div
+                            key={index}
+                            className="bg-[#1e293b] p-4 rounded-lg border border-slate-800 shadow"
+                        >
+                            <h4 className="text-lg font-semibold">{tech.title}</h4>
+                            <p className="text-sm text-gray-400">{tech.desc}</p>
+                        </div>
+                    ))}
                 </div>
-                <div className="bg-[#2c2c2c] border border-gray-700 rounded-xl p-6 shadow-md hover:shadow-xl transition flex flex-col gap-2">
-                    <h4 className="text-xl font-semibold">Node.js</h4>
-                    <p className="text-gray-300 text-sm">Desenvolvimento de APIs RESTful, back-ends escaláveis e integrações com bancos de dados para soluções web completas.</p>
-                </div>
-                <div className="bg-[#2c2c2c] border border-gray-700 rounded-xl p-6 shadow-md hover:shadow-xl transition flex flex-col gap-2">
-                    <h4 className="text-xl font-semibold">PHP</h4>
-                    <p className="text-gray-300 text-sm">Construção e manutenção de sites, blogs, sistemas de gerenciamento de conteúdo e aplicações legadas com eficiência e segurança.</p>
-                </div>
-                <div className="bg-[#2c2c2c] border border-gray-700 rounded-xl p-6 shadow-md hover:shadow-xl transition flex flex-col gap-2">
-                    <h4 className="text-xl font-semibold">.Net</h4>
-                    <p className="text-gray-300 text-sm">Desenvolvimento de sistemas empresariais, aplicações internas e APIs robustas com C# e .NET Core, focando em performance e estrutura sólida.</p>
-                </div>
-                <div className="bg-[#2c2c2c] border border-gray-700 rounded-xl p-6 shadow-md hover:shadow-xl transition flex flex-col gap-2">
-                    <h4 className="text-xl font-semibold">Python - Web </h4>
-                    <p className="text-gray-300 text-sm">Desenvolvimento de APIs e aplicações web com Flask e Django.</p>
-                </div>
-                <div className="bg-[#2c2c2c] border border-gray-700 rounded-xl p-6 shadow-md hover:shadow-xl transition flex flex-col gap-2">
-                    <h4 className="text-lg font-semibold">Python - Análise de Dados</h4>
-                    <p className="text-gray-300 text-sm">Exploração de dados, automações e visualizações com bibliotecas como Pandas e Matplotlib para extração de insights e apoio à tomada de decisões.</p>
+
+                {/* Página 2 */}
+                <div className="min-w-full flex flex-col gap-4 p-2 snap-start">
+                    {techs.slice(4).map((tech, index) => (
+                        <div
+                            key={index}
+                            className="bg-[#1e293b] p-4 rounded-lg border border-slate-800 shadow"
+                        >
+                            <h4 className="text-lg font-semibold">{tech.title}</h4>
+                            <p className="text-sm text-gray-400">{tech.desc}</p>
+                        </div>
+                    ))}
                 </div>
             </div>
-        </div>
 
-    )
+            {/* Desktop: grid normal */}
+            <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6"> {/* gap maior */}
+                {techs.map((tech, index) => (
+                    <div
+                        key={index}
+                        className="bg-[#1e293b] p-4 rounded-lg border border-slate-800 shadow"
+                    >
+                        <h4 className="text-lg font-semibold">{tech.title}</h4>
+                        <p className="text-sm text-gray-400">{tech.desc}</p>
+                    </div>
+                ))}
+            </div>
+        </section>
+    );
 }

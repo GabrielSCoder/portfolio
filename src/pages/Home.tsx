@@ -7,9 +7,9 @@ import ContactMeSection from "../templates/ContactMeSection";
 
 export default function Home() {
     return (
-        <div className="flex flex-col justify-center items-center ">
+        <div className="flex flex-col items-center justify-center h-screen">
             <HeaderMenu />
-            <div className="flex flex-col gap-10 z-10">
+            <div className="container-custom">
                 <FirstSection />
                 <AboutSection />
                 <TecnoSection />
@@ -17,5 +17,5 @@ export default function Home() {
                 <ContactMeSection />
             </div>
         </div>
-    )
+    );
 }
