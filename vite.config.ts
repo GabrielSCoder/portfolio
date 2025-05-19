@@ -4,6 +4,7 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
   ],
+  base : "/portfolio",
   server: {
     host: '0.0.0.0',
     port: 8080,
