@@ -2,6 +2,7 @@ import Portifolio from "../assets/portifolio.png"
 import Vox from "../assets/webvox.png"
 import Crm from "../assets/crm.png"
 import Dex from "../assets/reactdex.png"
+import Adot from "../assets/adot.png"
 
 export default function ProjectsSection() {
     const projects = [
@@ -28,6 +29,12 @@ export default function ProjectsSection() {
             description: "React / Node.js",
             image: Dex,
             link: "https://pokedex-react-lovat.vercel.app/",
+        },
+        {
+            title: "Adot",
+            description: "PHP / MySQL",
+            image: Adot,
+            link: "https://adot.infy.uk/"
         }
     ];
 
@@ -39,9 +46,9 @@ export default function ProjectsSection() {
                     Alguns de meus trabalhos
                 </h3>
 
-                
+
                 <div className=" sm:hidden overflow-x-auto overflow-y-hidden flex snap-x snap-mandatory scroll-smooth mt-4">
-                  
+
                     <div className="min-w-full flex flex-col gap-4 snap-start">
                         {projects.slice(0, 2).map((project, index) => (
                             <a
@@ -67,7 +74,7 @@ export default function ProjectsSection() {
                         ))}
                     </div>
 
-                 
+
                     <div className="min-w-full flex flex-col gap-4 snap-start">
                         {projects.slice(2).map((project, index) => (
                             <a
@@ -94,7 +101,7 @@ export default function ProjectsSection() {
                     </div>
                 </div>
 
-              
+
                 <div className="hidden sm:grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
                     {projects.map((project, index) => (
                         <a
