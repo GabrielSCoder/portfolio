@@ -3,6 +3,7 @@ import Vox from "../assets/webvox.png"
 import Crm from "../assets/crm.png"
 import Dex from "../assets/reactdex.png"
 import Adot from "../assets/adot.png"
+import Blog from "../assets/your-blog.png"
 
 export default function ProjectsSection() {
     const projects = [
@@ -35,6 +36,12 @@ export default function ProjectsSection() {
             description: "PHP / MySQL",
             image: Adot,
             link: "https://adot.infy.uk/"
+        },
+        {
+            title: "Your-Blog",
+            description: "PHP CodeIgniter4 / MySQL",
+            image: Blog,
+            link: "https://your-blog.page.gd/"
         }
     ];
 
