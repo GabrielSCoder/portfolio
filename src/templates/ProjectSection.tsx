@@ -1,17 +1,17 @@
-import Portifolio from "../assets/portifolio.png"
 import Vox from "../assets/webvox.png"
 import Crm from "../assets/crm.png"
 import Dex from "../assets/reactdex.png"
 import Adot from "../assets/adot.png"
 import Blog from "../assets/your-blog.png"
+import GamerBio from "../assets/portifolio.png"
 
 export default function ProjectsSection() {
     const projects = [
         {
-            title: "Portifólio (Esse mesmo)",
-            description: "React",
-            image: Portifolio,
-            link: "https://github.com/GabrielSCoder/portfolio",
+            title: "GamerBio",
+            description: "React / Node.js",
+            image: GamerBio,
+            link: "https://gamer-bio.vercel.app/",
         },
         {
             title: "WebVox (Clone X)",
