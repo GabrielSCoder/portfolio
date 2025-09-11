@@ -3,7 +3,7 @@ import Crm from "../assets/crm.png"
 import Dex from "../assets/reactdex.png"
 import Adot from "../assets/adot.png"
 import Blog from "../assets/your-blog.png"
-import GamerBio from "../assets/portifolio.png"
+import GamerBio from "../assets/gamerbio.png"
 
 export default function ProjectsSection() {
     const projects = [
