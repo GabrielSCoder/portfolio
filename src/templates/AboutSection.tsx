@@ -26,7 +26,7 @@ export default function AboutSection() {
             </p>
 
             <a
-                href="https://drive.google.com/file/d/1SJvGnkwXb2xNv_5K4QR_C869bheL_aGr/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1SJvGnkwXb2xNv_5K4QR_C869bheL_aGr/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mx-auto sm:mx-0"
